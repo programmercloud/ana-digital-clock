@@ -49,34 +49,22 @@
     $(".date").text(date);
   }
 
-  function dailer(selector, size) {
-    for (var s = 0; s < 60; s++) {
-      $(selector).append(
-        '<span style="transform: rotate(' +
-          6 * s +
-          "deg) translateX(" +
-          size +
-          'px)">' +
-          s +
-          "</span>"
-      );
+ function dailer( selector , size){
+     for(var s = 0; s < 60 ; s++){
+      $(selector).append('<span style="transform: rotate('+ 6 * s +'deg) translateX('+ size +'px)">'+s+'</span>')
     }
   }
-
-  dailer(".second", 195);
-  dailer(".minute", 145);
-  dailer(".dail", 230);
-
-  for (var s = 1; s < 13; s++) {
-    $(".hour").append(
-      '<span style="transform: rotate(' +
-        30 * s +
-        'deg) translateX(100px)">' +
-        s +
-        "</span>"
-    );
-  }
-
+  
+  dailer( '.second' , 195);
+  dailer( '.minute' , 145);
+  dailer( '.dail' , 230);
+  
+  for(var s = 1; s < 13 ; s++){
+      $('.hour').append('<span style="transform: rotate('+ 30 * s +'deg) translateX(100px)">'+s+'</span>')
+    }
+  
+  
   setInterval(getTime, 1000);
   getTime();
+  
 })();
